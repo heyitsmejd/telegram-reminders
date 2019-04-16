@@ -3,8 +3,8 @@ const chatId = 'YOUR-CHAT-ID'
 const telegramToken = 'YOUR-TELEGRAM-BOT-TOKEN'
 const airToken = 'YOUR-AIR-INDEX-TOKEN'
 const darksky = 'https://api.darksky.net/forecast/YOUR-DARKSKY-TOKEN/'
-const myTimezone = 'YOUR-TIMEZONE' // 'Asia/Seoul'
-const bangkok = { // 
+const myTimezone = 'YOUR-TIMEZONE' // 'Asia/Bangkok'
+const bangkok = { // Adjust to your preferred city.
 	name: 'Bangkok',
 	lat: '13.7563',
 	long: '100.5018'
@@ -184,6 +184,10 @@ const startJob = (task, startDay) => {
 
 /// Bot commands
 let canSetOptions = true;
+
+bot.onText(/\/chatID/, (msg, match) => {
+	bot.sendMessage(msg.chat.id, `Your chat id is ${msg.chat.id}.`)
+})
 
 bot.onText(/\/check/, (msg, match) => {
 	checkNotifications().then(querySnapshot => {
