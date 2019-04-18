@@ -1,6 +1,6 @@
 # telegram-reminders
 
-This is a telegram bot that sends reminders for any task you desire based on schedules. Can run in any timezone. Uses Firebase for real time storage.
+This is a simplified version of a private telegram bot that sends reminders for any task you desire based on schedules. Can run in any timezone. Uses Firebase for real time storage.
 
 ## Getting Started
 To start the reminder, visit the [BotFather](https://telegram.me/BotFather) and setup your bot. 
